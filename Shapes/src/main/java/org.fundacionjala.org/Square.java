@@ -5,8 +5,8 @@ package org.fundacionjala.org;
  */
 public class Square extends Rectangle{
 
-    public Square(int sideA, int sideB){
-        super(sideA,sideB);
+    public Square(int side){
+        super(side,side);
 
     }
     public double calculatePerimeter(){

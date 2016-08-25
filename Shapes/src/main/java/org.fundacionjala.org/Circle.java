@@ -12,11 +12,10 @@ public class Circle extends Shape{
         this.radio = radio;
     }
     public double calculateArea(){
-        System.out.println("Circle area: "+radio*PI);
+
         return radio*PI;
     }
     public double calculatePerimeter(){
-        System.out.println("Perimeter: "+2*radio*PI);
         return 2*radio*PI;
     }
 }

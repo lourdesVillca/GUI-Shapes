@@ -15,6 +15,7 @@ public class CircleTest {
         assertEquals(result, shape.calculateArea(),0.001);
 
     }
+    @Test
     public void test_CalculatePerimeter(){
         Shape shape = new Circle(5);
         double result = 31.4;
