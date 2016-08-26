@@ -1,16 +1,17 @@
 package org.fundacionjala.org;
 
 /**
- * Created by LourdesVillca on 8/24/2016.
+ * Shape that inherit the methods of Square.
  */
-public class Square extends Rectangle{
+public class Square extends Rectangle {
 
-    public Square(int side){
-        super(side,side);
+    /**
+     * Constructor.
+     *
+     * @param side of the Square
+     */
+    public Square(int side) {
+        super(side, side);
+    }
 
-    }
-    public double calculatePerimeter(){
-        return 4*this.getSideA();
-    }
 }
-

@@ -1,10 +1,22 @@
 package org.fundacionjala.org;
 
 /**
- * Created by LourdesVillca on 8/24/2016.
+ * Base class to calculate Area and Perimeter.
  */
-public abstract class Shape {
+public interface Shape {
 
-    abstract double calculateArea();
-    abstract double calculatePerimeter();
+    /**
+     * Calculates the Area.
+     *
+     * @return the calculated Area.
+     */
+    double calculateArea();
+
+    /**
+     * Calculates the perimeter.
+     *
+     * @return the calculated perimeter.
+     */
+    double calculatePerimeter();
+
 }

@@ -1,21 +1,33 @@
 package org.fundacionjala.org;
 
-
 /**
- * Created by LourdesVillca on 8/24/2016.
+ * Calculates the perimeter and area for a Circle.
  */
-public class Circle extends Shape{
-    private int radio;
-    private static final double PI = 3.14;
+public class Circle implements Shape {
 
-    public Circle(int radio){
+    private final int radio;
+
+    /**
+     * Constructor.
+     *
+     * @param radio of the circle.
+     */
+    public Circle(int radio) {
         this.radio = radio;
     }
-    public double calculateArea(){
 
-        return radio*PI;
+    /**
+     * {@inheritDoc}
+     */
+    public double calculateArea() {
+        return radio * radio * Math.PI;
     }
-    public double calculatePerimeter(){
-        return 2*radio*PI;
+
+    /**
+     * {@inheritDoc}
+     */
+    public double calculatePerimeter() {
+        return 2 * radio * Math.PI;
     }
+
 }

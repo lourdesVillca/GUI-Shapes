@@ -1,26 +1,35 @@
 package org.fundacionjala.org;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
- * Created by LourdesVillca on 8/24/2016.
+ * Test for {@link Circle}
  */
 public class CircleTest {
-    @Test
-    public void test_CalculateArea(){
-        Shape shape = new Circle(5);
-        double result = 15.7;
-        assertEquals(result, shape.calculateArea(),0.001);
 
+    private static final double DELTA = 0.001;
+
+    private Shape shape;
+
+    @Before
+    public void setUp() {
+        final int radio = 5;
+        shape = new Circle(radio);
     }
-    @Test
-    public void test_CalculatePerimeter(){
-        Shape shape = new Circle(5);
-        double result = 31.4;
-        assertEquals(result, shape.calculatePerimeter(),0.001);
 
+    @Test
+    public void test_CalculateArea() {
+        final double result = 78.5398;
+        assertEquals(result, shape.calculateArea(), DELTA);
+    }
+
+    @Test
+    public void test_CalculatePerimeter() {
+        final double result = 31.4159;
+        assertEquals(result, shape.calculatePerimeter(), DELTA);
     }
 
 }

@@ -1,23 +1,36 @@
 package org.fundacionjala.org;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by LourdesVillca on 8/24/2016.
+ * Test for {@link Rectangle}
  */
 public class RectangleTest {
-    @Test
-    public void test_CalculateArea(){
-        Shape shape = new Rectangle(5,6);
-        double result = 30;
-        assertEquals(result, shape.calculateArea(),0.001);
+
+    private static final double DELTA = 0.001;
+
+    private Shape shape;
+
+    @Before
+    public void setUp() {
+        final int sideA = 5;
+        final int sideB = 6;
+        shape = new Rectangle(sideA, sideB);
     }
+
     @Test
-    public void test_CalculatePerimeter(){
-        Shape shape = new Rectangle(5,6);
-        double result = 60;
-        assertEquals(result, shape.calculatePerimeter(),0.001);
+    public void test_CalculateArea() {
+        final double result = 30;
+        assertEquals(result, shape.calculateArea(), DELTA);
     }
+
+    @Test
+    public void test_CalculatePerimeter() {
+        final double result = 22;
+        assertEquals(result, shape.calculatePerimeter(), DELTA);
+    }
+
 }

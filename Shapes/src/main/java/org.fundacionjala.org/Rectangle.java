@@ -1,28 +1,37 @@
 package org.fundacionjala.org;
 
 /**
- * Created by LourdesVillca on 8/24/2016.
+ * Calculates the perimeter and area for a Rectangle
  */
-public class Rectangle extends Shape{
+public class Rectangle implements Shape {
 
-    private int sideA;
-    private int sideB;
-    public Rectangle(int sideA, int sideB){
+    protected final int sideA;
+
+    protected final int sideB;
+
+    /**
+     * Constructor.
+     *
+     * @param sideA of the rectangle.
+     * @param sideB of the rectangle.
+     */
+    public Rectangle(int sideA, int sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
     }
-    public double calculateArea(){
-        return sideA*sideB;
-    }
-    public double calculatePerimeter(){
-        return 2*sideA*sideB;
-    }
-    public int getSideA() {
-        return sideA;
+
+    /**
+     * {@inheritDoc}
+     */
+    public double calculateArea() {
+        return sideA * sideB;
     }
 
-    public int getSideB() {
-        return sideB;
+    /**
+     * {@inheritDoc}
+     */
+    public double calculatePerimeter() {
+        return 2 * (sideA + sideB);
     }
 
 }
